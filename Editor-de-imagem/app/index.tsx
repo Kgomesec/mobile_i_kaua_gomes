@@ -1,3 +1,4 @@
+//@author Carlos Eduardo e Kauã Gomes
 import { StatusBar } from 'expo-status-bar';
 import { Text, View, StyleSheet, Platform } from "react-native";
 import { useState, useRef, useCallback, useEffect } from 'react';
@@ -65,7 +66,7 @@ export default function Index() {
 
         await MediaLibrary.saveToLibraryAsync(localUri);
         if (localUri) {
-          alert("Saved!");
+          alert("Salvo!");
         }
       } catch (e) {
         console.log(e);
@@ -79,7 +80,7 @@ export default function Index() {
         });
 
         let link = document.createElement('a');
-        link.download = 'sticker-smash.jpeg';
+        link.download = 'imagem.jpeg';
         link.href = dataUrl;
         link.click();
       } catch (e) {
@@ -129,15 +130,15 @@ export default function Index() {
       {showAppOptions ? (
         <View style={styles.optionsContainer}>
           <View style={styles.optionsRow}>
-            <IconButton icon="refresh" label="Reset" onPress={onReset} />
+            <IconButton icon="refresh" label="Resetar" onPress={onReset} />
             <CircleButton onPress={onAddSticker} />
-            <IconButton icon="save-alt" label="Save" onPress={onSaveImageAsync} />
+            <IconButton icon="save-alt" label="Salvar" onPress={onSaveImageAsync} />
           </View>
         </View>
       ) : (
         <View style={styles.footerContainer}>
-          <Button label="Chooose a photo" theme="primary" onPress={pickImageAsync} />
-          <Button label="Use this photo" theme="" onPress={() => setShowAppOptions(true)} />
+          <Button label="Escolha uma imagem" theme="primary" onPress={pickImageAsync} />
+          <Button label="Usar essa imagem" theme="" onPress={() => setShowAppOptions(true)} />
         </View>
       )}
       <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
