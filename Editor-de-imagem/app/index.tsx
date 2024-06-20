@@ -97,7 +97,7 @@ export default function Index() {
 
   useEffect(() => {
     async function prepare() {
-      try {
+      try { //@author Carlos Eduardo e Kauã Gomes
         // Pré-carregue fontes ou faça chamadas à API aqui
         await new Promise(resolve => setTimeout(resolve, 2000));
       } catch (e) {
@@ -147,7 +147,7 @@ export default function Index() {
       <StatusBar style="light" />
     </GestureHandlerRootView>
   );
-}
+} //@author Carlos Eduardo e Kauã Gomes
 
 const styles = StyleSheet.create({
   container: {
@@ -177,3 +177,4 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
 });
+//@author Carlos Eduardo e Kauã Gomes
