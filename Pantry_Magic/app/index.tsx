@@ -55,6 +55,7 @@ export default function App() {
                   <Text style={styles.text}>Lorem ipsum dolor sit amet. Et impet...</Text> Descrição */}
                 </View>
               </View>
+              {/* NAO PUSH NAO FUNCIONOU AAAAAAAAAAAAAAAAAAAAAAAA */}
               <View style={styles.favoriteRecipe}>
                 <Image source={require('../assets/images/favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg')} />
               </View>
