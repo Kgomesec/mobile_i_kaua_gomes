@@ -62,11 +62,69 @@ export default function App() {
             </View>
 
             <View style={styles.recipeItemContainer}>
-              <Image
-                source={{ uri: 'https://www.gov.br/saude/pt-br/assuntos/saude-brasil/glossario/comida-de-verdade/wiki-4-comida-de-verdade.png' }}
-                style={styles.recipeImage}
-                resizeMode="cover"
-              />
+              <View style={styles.rowContainer}>
+                <View style={styles.recipeImageContainer}>
+                  <Image
+                    source={{ uri: 'https://www.gov.br/saude/pt-br/assuntos/saude-brasil/glossario/comida-de-verdade/wiki-4-comida-de-verdade.png' }}
+                    style={styles.recipeImage}
+                    resizeMode="cover"
+                  />
+                </View>
+                <View style={styles.recipeTextContainer}>
+                  <Text style={styles.textBold}>Name of recipe</Text>
+                  <Text style={styles.text}>10/10 Necessary products</Text>
+                  {/* <Text> </Text>
+                  <Text style={styles.text}>Lorem ipsum dolor sit amet. Et impet...</Text> Descrição */}
+                </View>
+              </View>
+              {/* NAO PUSH NAO FUNCIONOU AAAAAAAAAAAAAAAAAAAAAAAA */}
+              <View style={styles.favoriteRecipe}>
+                <Image source={require('../assets/images/favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg')} />
+              </View>
+            </View>
+
+            <View style={styles.recipeItemContainer}>
+              <View style={styles.rowContainer}>
+                <View style={styles.recipeImageContainer}>
+                  <Image
+                    source={{ uri: 'https://www.gov.br/saude/pt-br/assuntos/saude-brasil/glossario/comida-de-verdade/wiki-4-comida-de-verdade.png' }}
+                    style={styles.recipeImage}
+                    resizeMode="cover"
+                  />
+                </View>
+                <View style={styles.recipeTextContainer}>
+                  <Text style={styles.textBold}>Name of recipe</Text>
+                  <Text style={styles.text}>10/10 Necessary products</Text>
+                  {/* <Text> </Text>
+                  <Text style={styles.text}>Lorem ipsum dolor sit amet. Et impet...</Text> Descrição */}
+                </View>
+              </View>
+              {/* NAO PUSH NAO FUNCIONOU AAAAAAAAAAAAAAAAAAAAAAAA */}
+              <View style={styles.favoriteRecipe}>
+                <Image source={require('../assets/images/favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg')} />
+              </View>
+            </View>
+
+            <View style={styles.recipeItemContainer}>
+              <View style={styles.rowContainer}>
+                <View style={styles.recipeImageContainer}>
+                  <Image
+                    source={{ uri: 'https://www.gov.br/saude/pt-br/assuntos/saude-brasil/glossario/comida-de-verdade/wiki-4-comida-de-verdade.png' }}
+                    style={styles.recipeImage}
+                    resizeMode="cover"
+                  />
+                </View>
+                <View style={styles.recipeTextContainer}>
+                  <Text style={styles.textBold}>Name of recipe</Text>
+                  <Text style={styles.text}>10/10 Necessary products</Text>
+                  {/* <Text> </Text>
+                  <Text style={styles.text}>Lorem ipsum dolor sit amet. Et impet...</Text> Descrição */}
+                </View>
+              </View>
+              {/* NAO PUSH NAO FUNCIONOU AAAAAAAAAAAAAAAAAAAAAAAA */}
+              <View style={styles.favoriteRecipe}>
+                <Image source={require('../assets/images/favorite_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg')} />
+              </View>
             </View>
 
           </View>
@@ -84,7 +142,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#fbfbfb',
     width: '100%',
     alignItems: 'center',
   },
@@ -141,8 +199,15 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     marginBottom: 15,
     maxWidth: 400,
-    backgroundColor: 'green',
+    backgroundColor: '#fff',
     padding: 15,
+    // Sombras no iOS
+    shadowColor: '#000', 
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25, 
+    shadowRadius: 3.84, 
+    // Sombras no Android
+    elevation: 5,
   },
   rowContainer: {
     display: 'flex',
