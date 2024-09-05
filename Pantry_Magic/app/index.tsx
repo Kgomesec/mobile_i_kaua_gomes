@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
 import axios from 'axios'; // para fazer requests
 import React, { useEffect } from 'react';
 
@@ -145,6 +145,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#fbfbfb',
     width: '100%',
     alignItems: 'center',
+    ImageBackground:'./images/Background-Pantry-Magic.jng',
   },
   centerContainer: {
     width: '100%',
