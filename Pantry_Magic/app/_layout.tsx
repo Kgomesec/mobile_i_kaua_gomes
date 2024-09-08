@@ -4,11 +4,8 @@ export default function RootLayout() {
   return (
     <Stack>
       <Stack.Screen
-        name="index"
-        options={{
-          headerShown: false,
-          contentStyle: { marginTop: 50 }, 
-        }}
+        name="(index)"
+        
       />
     </Stack>
   );
