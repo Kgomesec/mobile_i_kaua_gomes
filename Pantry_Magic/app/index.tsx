@@ -1,10 +1,8 @@
-<<<<<<< HEAD
-import { StyleSheet, Text, View, Image } from 'react-native';
-=======
 import { StyleSheet, Text, View, Image, ImageBackground, ScrollView } from 'react-native';
 import axios from 'axios'; // para fazer requests
 import React, { useEffect } from 'react';
->>>>>>> bd427917794961ff5cd9a1088dfb43adee4c4086
+import { Link } from 'expo-router';
+import Button from '../components/Button';
 
 export default function Login() {
   return (
@@ -15,12 +13,12 @@ export default function Login() {
         <Text style={styles.description}>Sign up or login</Text>
       </View>
       <View style={[styles.buttonsContainer, styles.centerContent]}>
-        <View>
-          <Text>Sign up</Text>
-        </View>
-        <View>
-          <Text>Login</Text>
-        </View>
+        <Link href={'/homePage'}>
+          <Button label="Sign up" theme="primary"/>
+        </Link>
+        <Link href="./login">
+          <Button label="Login" theme=""/>
+        </Link>
       </View>
     </View>
   );
@@ -30,22 +28,29 @@ const styles = StyleSheet.create({
   container: {
     height: '100%',
     alignItems: 'center',
-    justifyContent: 'space-around',
+    justifyContent: 'space-around', 
   },
   centerContent: {
     alignItems: 'center',
-    ImageBackground:'./images/Background-Pantry-Magic.jng',
   },
   image: {
     width: 350,
     height: 350,
   },
+  textContainer: {
+    gap: 10,
+  },
   getStarted: {
     fontSize: 32,
     fontWeight: '500',
+    color: '#253238',
   },
   description: {
     fontSize: 18,
     fontWeight: '400',
+    color: '#253238',
+  },
+  buttonsContainer: {
+    gap: 10,
   },
 });
